@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core" 
+      lang="en">
+<h:head>    
+    <meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<meta name="description" content="Santos, Haro labs"/>
+	<meta name="author" content="Santos, Haro labs, and Bootstrap"/>
+	<meta name="generator" content="Haro Labs"/>
+
+    <title>Simple login Primefaces</title>
+
+</h:head>
+<h:body>
+    <div class="container-fluid">
+  		<div class="row">
+     		<div class="col-md-8">
+     			<p>Login.</p>
+     		</div>
+  			<div class="col-4">
+
+<div class="container-form">
+  			<b:column span="12">
+  			    <h:form styleClass="form-signin">
+				  <div class="form-label-group">
+				    <!--<b:alert severity="danger">Datos incorrectos.</b:alert> -->
+				  <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true"/>
+				  </div>
+				  <div class="form-label-group">
+				    <p:inputText id="usuario" type="text" value="#{loginBean.usuario}" styleClass="form-control" placeholder="Username"/>
+				  </div>
+				
+				  <div class="form-label-group">
+				    <p:inputText type="password" id="password" value="#{loginBean.password}" styleClass="form-control" placeholder="Password"/>
+				  </div>
+				  <p:commandButton value="Iniciar sesión" action="#{loginBean.login}" look="primary" styleClass="btn btn-lg btn-primary btn-block" />
+				  <p class="mt-5 mb-3 text-muted text-center">&copy; 2020 Afirme</p>
+			</h:form>
+			</b:column>  
+			</div>
+
+  			</div>
+  		</div>
+	</div>
+</h:body>
+</html>
